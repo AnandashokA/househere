@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let item of rentalData" (click)="handleCardClick(item)" >
+      <div class="card">
+        <img [src]="item.imageUrl" class="card-img-top" alt="house Image ">
+        <div class="card-body">
+          <h5 class="card-title">{{item.place}}</h5>
+          <p class="card-text">{{item.place}}</p>
+          <p class="card-text">{{item.locality}}</p>
+          <p class="card-text">{{item.details}}</p>
+          <p class="card-text">OWNER : {{item.ownerName}}</p>
+          <p class="card-text">PHONE : {{item.phoneNumber}}</p>
+          <button >ENQUIRE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br><br><br><br>
+<div *ngIf="selectedItem" class="selected-details">
+  <h3>Selected House Details</h3>
+  <p><strong>Place:</strong> {{ selectedItem.place }}</p>
+  <p><strong>Locality:</strong> {{ selectedItem.locality }}</p>
+  <p><strong>Details:</strong> {{ selectedItem.details }}</p>
+  <p><strong>Owner:</strong> {{ selectedItem.ownerName }}</p>
+  <p><strong>Phone:</strong> {{ selectedItem.phoneNumber }}</p>
+</div>

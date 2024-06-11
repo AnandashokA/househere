@@ -1,0 +1,22 @@
+<div class="container right-panel-active">
+  <div class="container__form container--signup">
+    <form (ngSubmit)="onSubmit()" #form="ngForm" class="form" id="form1">
+      <h2 class="form__title">Sign Up</h2>
+      <input type="text" placeholder="User" class="input" [(ngModel)]="username" name="username" required />
+      <input type="email" placeholder="Email" class="input" [(ngModel)]="email" name="email" required />
+      <input type="password" placeholder="Password" class="input" [(ngModel)]="password" name="password" required />
+      <button class="btn" type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <div class="container__overlay">
+    <div class="overlay">
+      <div class="overlay__panel overlay--left">
+        <button class="btn" routerLink="/login">Sign In</button>
+      </div>
+      <div class="overlay__panel overlay--right">
+        <button class="btn" id="signUp">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>

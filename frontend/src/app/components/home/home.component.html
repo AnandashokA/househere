@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <div class="container box">
+    <div class="container logo-head" >
+      <h1>HousingHere</h1>
+    </div>
+    <div class="container service">
+      <ul class=" container nav nav-pills nav-fill">
+        <li class="nav-item">
+          <a class="nav-link " routerLink="/rent" routerLinkActive="active" >RENT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">BUY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">COMMERCIAL</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container rent">
+      .
+    </div>
+  </div>
+</div>
+<script>
+  function setActive(event) {
+    event.preventDefault();
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    event.target.classList.add('active');
+  }
+</script>

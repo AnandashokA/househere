@@ -1,0 +1,24 @@
+<div class="container pt-5 pb-5">
+  <!-- Sign In -->
+  <div class="container__form container--signin">
+    <form (ngSubmit)="onSubmit()" #form="ngForm" class="form" id="form2">
+      <h2 class="form__title">Sign In</h2>
+      <input type="email" placeholder="Email" class="input" [(ngModel)]="email" name="email" required />
+      <input type="password" placeholder="Password" class="input" [(ngModel)]="password" name="password" required />
+      <a href="#" class="link">Forgot your password?</a>
+      <button class="btn" type="submit">Sign In</button>
+    </form>
+  </div>
+
+  <!-- Overlay -->
+  <div class="container__overlay">
+    <div class="overlay">
+      <div class="overlay__panel overlay--left">
+        <button class="btn" id="signIn">Sign In</button>
+      </div>
+      <div class="overlay__panel overlay--right">
+        <button class="btn" id="signUp" routerLink="/register" routerLinkActive="active">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>

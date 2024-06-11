@@ -1,0 +1,55 @@
+.container-fluid {
+  background: #e65c00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.logo-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  width: 70%;
+  margin-bottom: 50px;
+}
+
+h1 {
+  margin: 0; /* Remove default margin */
+}
+
+.service{
+  display: flex;
+  width: 70%;
+  height: 70%;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  /* background: scroll; */
+
+
+}
+.service {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nav-pills .nav-link {
+  color: white;
+  background-color: #ff9933;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #ffcc66;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #ff6600;
+}
