@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { RentItem } from '../rent.model';
+import { RentItem } from '../../model/rent.model';
 @Component({
   selector: 'app-rent-house-details',
   templateUrl: './rent-house-details.component.html',

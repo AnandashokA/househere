@@ -18,16 +18,15 @@ export class LoginComponent {
       response => {
         if (response && response.user) {
           console.log('Login successful:', response.user);
+          this.authService.changeLoginStatus(true);  // Set login status to true
           this.router.navigate(['/home']);
         } else {
           alert('Invalid email or password');
-          // Display error message to the user
         }
       },
       error => {
-        // window.alert("")
+        alert('Error logging in');
         console.error('Error logging in:', error);
-        // Display error message to the user
       }
     );
   }

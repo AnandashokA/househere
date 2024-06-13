@@ -10,7 +10,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { RentComponent } from './components/rent/rent.component';
 import { RentHouseDetailsComponent } from './components/rent-house-details/rent-house-details.component';
-
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileViewComponent } from './components/profile-view/profile-view.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +22,9 @@ import { RentHouseDetailsComponent } from './components/rent-house-details/rent-
     LoginComponent,
     RentComponent,
     RentHouseDetailsComponent,
+    ResetPasswordComponent,
+    ProfileComponent,
+    ProfileViewComponent
   ],
   imports: [
     BrowserModule,

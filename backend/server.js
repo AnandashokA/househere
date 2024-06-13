@@ -3,10 +3,8 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
 const mysql = require('mysql2');
 const cors = require('cors');
-const nodemailer = require('nodemailer');
-const crypto = require('crypto');
 const app = express();
-const port = 3002;  // Changed port to 3001
+const port = 3002;  // Changed port to 3002
 
 // Setup middleware
 app.use(bodyParser.json());
@@ -50,7 +48,6 @@ app.post('/register', (req, res) => {
 });
 
 // Login endpoint
-// Login endpoint
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
 
@@ -73,6 +70,39 @@ app.post('/login', (req, res) => {
     res.status(200).send({ user });
   });
 });
+
+// Get user profile
+app.get('/profile', (req, res) => {
+  const { email } = req.query;
+
+  const query = 'SELECT name, email, address, phone FROM users WHERE email = ?';
+  connection.query(query, [email], (err, results) => {
+    if (err) {
+      console.error('Error fetching user profile:', err);
+      return res.status(500).send('Error fetching user profile');
+    }
+    if (results.length === 0) {
+      return res.status(404).send('User not found');
+    }
+    res.status(200).json(results[0]);
+  });
+});
+
+
+// Update user profile
+app.post('/profile', (req, res) => {
+  const { email, name, address, phone } = req.body;
+
+  const query = 'UPDATE users SET name = ?, address = ?, phone = ? WHERE email = ?';
+  connection.query(query, [name, address, phone, email], (err, results) => {
+    if (err) {
+      console.error('Error updating user profile:', err);
+      return res.status(500).send('Error updating user profile');
+    }
+    res.status(200).send('User profile updated successfully!');
+  });
+});
+
 
 
 app.listen(port, () => {

@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSave()">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" [(ngModel)]="profile.name" name="name" required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" [(ngModel)]="profile.email" name="email" required>
+  </div>
+  <div>
+    <label for="address">Address:</label>
+    <input id="address" [(ngModel)]="profile.address" name="address" required>
+  </div>
+  <div>
+    <label for="phone">Phone:</label>
+    <input id="phone" [(ngModel)]="profile.phone" name="phone" required>
+  </div>
+  <!-- Add more fields as needed -->
+  <button type="submit">Save</button>
+</form>
+<app-profile-view [profile]="profile"></app-profile-view>

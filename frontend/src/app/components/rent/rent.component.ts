@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RentItem } from '../rent.model';
+import { RentItem } from '../../model/rent.model';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-rent',
@@ -102,6 +102,5 @@ export class RentComponent {
 
 
   ngOnInit(): void {
-    // Initialize data here if needed
   }
 }

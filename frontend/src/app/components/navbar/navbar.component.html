@@ -6,13 +6,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!isloggedin">
           <a class="nav-link" routerLink="/register" routerLinkActive="active">Login</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/signup" routerLinkActive="active">Signup</a> <!-- Ensure route is configured -->
+        <li class="nav-item" *ngIf="isloggedin">
+          <a class="nav-link" routerLink="/profile" routerLinkActive="active">Profile</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isloggedin">
           <a class="nav-link" routerLink="/menu" routerLinkActive="active">Menu</a> <!-- Ensure route is configured -->
         </li>
       </ul>
